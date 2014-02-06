@@ -11,7 +11,8 @@ XSL Template convert from Sphinx XML file to ReVIEW format.
 
 このテンプレートを利用するには、LinuxやOS XなどのUnixライクOSであれば `xsltproc` 、Windowsでは `msxsl.exe`_ などのXSLTプロセッサが必要です。以下のようにコマンドを実行して、出力を適当なファイルにリダイレクトしてください。
 
-.. code::
+.. code:: bash
+
     $ xsltproc sphinxxml2review.xslt <your xml file>
 
 .. _`msxsl.exe`: http://www.microsoft.com/en-us/download/details.aspx?id=21714
