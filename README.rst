@@ -9,11 +9,12 @@ XSL Template convert from Sphinx XML file to ReVIEW format.
 
 このXSLテンプレートは、Sphinxから出力されたXMLファイルを、ReVIEW形式のテキストに変換するためのものです。ただし、そのままビルドできるようにはできていないため、あくまでも作業の補助ツールとして考えてください。
 
-このテンプレートを利用するには、LinuxやOS XなどのUnixライクOSであれば `xsltproc` 、Windowsでは `msxsl.exe` などのXSLTプロセッサが必要です。以下のようにコマンドを実行して、出力を適当なファイルにリダイレクトしてください。
+このテンプレートを利用するには、LinuxやOS XなどのUnixライクOSであれば `xsltproc` 、Windowsでは `msxsl.exe`_ などのXSLTプロセッサが必要です。以下のようにコマンドを実行して、出力を適当なファイルにリダイレクトしてください。
 
-::
+.. code::
     $ xsltproc sphinxxml2review.xslt <your xml file>
 
+.. _`msxsl.exe`: http://www.microsoft.com/en-us/download/details.aspx?id=21714
 
 制限事項
 --------
