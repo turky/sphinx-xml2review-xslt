@@ -2,12 +2,12 @@
 sphinx-xml2review-xsl
 =====================
 
-XSL Template convert from Sphinx XML file to ReVIEW format.
+XSL Template convert from Sphinx XML file to Re:VIEW format.
 
 概要
 ----
 
-このXSLテンプレートは、Sphinxから出力されたXMLファイルを、ReVIEW形式のテキストに変換するためのものです。ただし、そのままビルドできるようにはできていないため、あくまでも作業の補助ツールとして考えてください。
+このXSLテンプレートは、Sphinxから出力されたXMLファイルを、Re:VIEW形式のテキストに変換するためのものです。ただし、そのままビルドできるようにはできていないため、あくまでも作業の補助ツールとして考えてください。
 
 このテンプレートを利用するには、LinuxやOS XなどのUnixライクOSであれば `xsltproc` 、Windowsでは `msxsl.exe`_ などのXSLTプロセッサが必要です。以下のようにコマンドを実行して、出力を適当なファイルにリダイレクトしてください。
 
@@ -23,6 +23,8 @@ XSL Template convert from Sphinx XML file to ReVIEW format.
 - テーブルの情報が上手く変換できていません。各セルがタブ区切りで出力しますので、適宜編集してください。
 - 変換はファイル毎に行われるため、doctreeで表現された文書構造を表すことができません。
 - カスタムのディレクディブなどは無視されてしまいますので、別途ルールを追加する必要があります。内容がそのまま出力されるはずです。
+- 20140502追加：SphinxのXMLビルダのバグに遭遇しているようで（https://bitbucket.org/birkenfeld/sphinx/issue/1450/xml-builder-creates-invalid-xml-file）一部の要素内に値のない「module」という属性があるために上手く変換できない場合があります。修正されたバージョンがリリースされるまでは、この属性を削除してから変換する必要があります
+
 
 著作権情報
 ----------

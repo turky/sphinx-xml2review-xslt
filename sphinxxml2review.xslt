@@ -169,6 +169,7 @@
 
 <xsl:template match="comment">
 #@# <xsl:apply-templates />
+#@# comment end
 </xsl:template>
 
 <!-- inline elements -->
@@ -181,6 +182,17 @@
 <xsl:template match="literal">@&lt;tt&gt;{<xsl:apply-templates />}</xsl:template>
 
 <xsl:template match="strong">@&lt;ttb&gt;{<xsl:apply-templates />}</xsl:template>
+
+<xsl:template match="desc">
+<xsl:apply-templates />
+</xsl:template>
+
+<xsl:template match="desc_signature"> : @&lt;ttb&gt;{<xsl:apply-templates />}</xsl:template>
+<xsl:template match="desc_parameterlist"><xsl:for-each select="."><xsl:apply-templates /></xsl:for-each></xsl:template>
+<xsl:template match="desc_optional"> [<xsl:apply-templates />]</xsl:template>
+<xsl:template match="desc_parameter"> @&lt;tti&gt;{<xsl:apply-templates />}</xsl:template>
+
+<xsl:template match="desc_content"><xsl:apply-templates /></xsl:template>
 
 <!-- text -->
 <xsl:template match="text()">
